@@ -1,9 +1,12 @@
 # P. Palacios Alonso Fractal cluster
 fc-Generates a random set of positions of spheres in a fractal cluster.
 
-In a fractal cluster the number of particles in the cluster and its gyration radius verifies,\n
+In a fractal cluster the number of particles in the cluster and its gyration radius verifies,
+
 $N = kf * (Rg/radius)^Df$. (1)
+
 Where:
+
    -N = Number of spheres in the cluster.
    -Radius = Radius of the spheres.
    -Df = Fractal dimension of the cluster.
