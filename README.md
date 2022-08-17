@@ -5,7 +5,7 @@ fc-Generates a random set of positions of spheres in a fractal cluster.
 
 In a fractal cluster the number of particles in the cluster and its gyration radius verifies,
 
-$N = k_f \cdot (R_g/radius)^D_f$ (1)
+$N = k_f \cdot (R_g/radius)^{D_f}$ (1)
 
 Where:
 
@@ -13,10 +13,10 @@ Where:
    - Radius = Radius of the spheres.
    - Df = Fractal dimension of the cluster.
    - kf = Fractal prefactor of the cluster.
-   - R_g = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
+   - $R_g$ = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
    
 # Compile with
-   $ make
+$ make
 You can test the code after compiling with:
 
    $ cp fc test/fc; chmod +x test.bash; ./test.bash
