@@ -14,10 +14,12 @@ Where:
    -Rg = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
    
 # Compile with
-$ make
+   $ make
 You can test the code after compiling with:
-$ cp fc test/fc; chmod +x test.bash; ./test.bash
-It will generate some clusters with different number of spheres and copmute the gyration radius as a function of the number of particles to see if relation [1] is verified.
+
+   $ cp fc test/fc; chmod +x test.bash; ./test.bash
+   
+It will generate some clusters with different number of spheres and copmute the gyration radius as a function of the number of particles to see if relation 1 is verified.
 You can edit the file test.bash to choose the different paramters. 
 
   
