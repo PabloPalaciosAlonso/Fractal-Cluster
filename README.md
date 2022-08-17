@@ -1,7 +1,7 @@
 # Fractal cluster
 P. Palacios Alonso 2022.
 
-fc - Generates a random set of positions of spheres in a fractal cluster.
+fc - Generates a random set of positions of spheres in a fractal cluster using the algorithm described in [1](https://doi.org/10.1006/jcis.2000.7027) .
 
 In a fractal cluster the number of particles in the cluster and its gyration radius verifies,
 
@@ -52,4 +52,7 @@ You can edit the file test.bash to choose the different paramters.
  <img src="https://github.com/PabloPalaciosAlonso/Fractal-Cluster/blob/main/res/example.png" width="600">
  
 Generated cluster visualized with superpunto (https://github.com/RaulPPelaez/superpunto).
-   
+
+# Bibliography
+
+[1] A.V.Filippov, M.Zurita and D.E.Rosner. Fractal-like Aggregates: Relation between Morphology and Physical Properties. https://doi.org/10.1006/jcis.2000.7027
