@@ -47,7 +47,7 @@ You can edit the file test.bash to choose the different paramters.
 ./fc -N 5000 -Df 1.8 -kf 1.1 -radius 0.5 -filename fc.out
  ```
  
- It will store the x y z coordinates of the centers of the spheres in the file fc.out.
+ It will generate a fractal cluster with N = 5000 spheres, fractal dimension Df = 1.8, fractal prefactor kf = 1.1 and radius = 0.5 and store the x y z coordinates of the centers of the spheres in the file fc.out.
  
  <img src="https://github.com/PabloPalaciosAlonso/Fractal-Cluster/blob/main/res/example.png" width="600">
  
