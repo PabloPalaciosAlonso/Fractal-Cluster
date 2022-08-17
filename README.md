@@ -1,4 +1,6 @@
-# P. Palacios Alonso Fractal cluster
+# Fractal cluster
+P. Palacios Alonso 2022.
+
 fc-Generates a random set of positions of spheres in a fractal cluster.
 
 In a fractal cluster the number of particles in the cluster and its gyration radius verifies,
