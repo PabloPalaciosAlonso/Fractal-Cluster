@@ -48,6 +48,8 @@ You can edit the file test.bash to choose the different paramters.
  ```
  
  It will store the x y z coordinates of the centers of the spheres in the file fc.out.
- <img src="[https://github.com/PabloPalaciosAlonso/Fractal-Cluster/blob/main/res/example.png]" width="300">
- Cluster generated, visualized with superpunto https://github.com/RaulPPelaez/superpunto.
+ 
+ <img src="https://github.com/PabloPalaciosAlonso/Fractal-Cluster/blob/main/res/example.png" width="600">
+ 
+Generated cluster visualized with superpunto (https://github.com/RaulPPelaez/superpunto).
    
