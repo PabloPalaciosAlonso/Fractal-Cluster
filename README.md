@@ -32,4 +32,13 @@ You can edit the file test.bash to choose the different paramters.
  ```bash
  ./fc [INPUTS]
  ```
+ 
+ - Required inputs
+   - -N: Number of the spheres in the cluster.
+   - -Radius: Radius of the spheres.
+   - -Df: Fractal dimension of the cluster.
+   - -kf: Fractal prefactor of the cluster.
+ - Optional inputs
+   - -filename: Name of a file in which to store the positions of the particles. If no filename is provided the positions are displayed in the comand line.
+   - -h: Prints a help message.
   
