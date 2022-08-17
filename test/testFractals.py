@@ -22,6 +22,7 @@ def printResults(nParticlesList, rgList, Df, kf):
     fit = u.least_squares(nParticlesList, np.array(rgList), xscale = "log", yscale = "log")
     print("Expected Df = "+str(Df)+"; Obtained Df = " + str(1/fit[0]))
     print("Expected kf = "+str(kf)+"; Obtained kf = " + str(pow(radius/np.exp(fit[1]),Df)))
+    
 def plotResults(nParticlesList, rgList, Df, kf, radius):
     plt.rcParams['font.size'] = 20
     plt.rcParams['figure.constrained_layout.use'] = True
@@ -40,8 +41,7 @@ def plotResults(nParticlesList, rgList, Df, kf, radius):
     ax.set_yscale("log")
     ax.legend()
     plt.show()
-
-    
+   
 Df = float(sys.argv[1])
 kf = float(sys.argv[2])
 radius = float(sys.argv[3])
