@@ -42,3 +42,9 @@ You can edit the file test.bash to choose the different paramters.
    - -filename: Name of a file in which to store the positions of the particles. If no filename is provided the positions are displayed in the comand line.
    - -h: Prints a help message.
   
+# Example
+```bash
+./fc -N 5000 -Df 1.8 -kf 1.1 -radius 0.5 -filename fc.out
+ ```
+ 
+ It will store the x y z coordinates of the centers of the spheres in the file fc.out.
