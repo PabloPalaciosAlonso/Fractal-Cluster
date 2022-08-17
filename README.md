@@ -9,11 +9,11 @@ $N = k_f \cdot (R_g/radius)^D_f$ (1)
 
 Where:
 
-   -N = Number of spheres in the cluster.
-   -Radius = Radius of the spheres.
-   -Df = Fractal dimension of the cluster.
-   -kf = Fractal prefactor of the cluster.
-   -Rg = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
+   - N = Number of spheres in the cluster.
+   - Radius = Radius of the spheres.
+   - Df = Fractal dimension of the cluster.
+   - kf = Fractal prefactor of the cluster.
+   - R_g = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
    
 # Compile with
    $ make
