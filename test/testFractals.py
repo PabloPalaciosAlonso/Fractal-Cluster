@@ -19,6 +19,27 @@ def computeGyrationRadius(pos, radius2):
     return np.sqrt(rg2+radius2)
 
 def printResults(nParticlesList, rgList, Df, kf):
+    fit = u.least_squares(nParticlesList, np.array(rgList), xscale = "log", yscale = "log")
+    print("Expected Df = "+str(Df)+"; Obtained Df = " + str(1/fit[0]))
+    print("Expected kf = "+str(kf)+"; Obtained kf = " + str(pow(radius/np.exp(fit[1]),Df)))
+def plotResults(nParticlesList, rgList, Df, kf, radius):
+    plt.rcParams['font.size'] = 20
+    plt.rcParams['figure.constrained_layout.use'] = True
+    plt.rcParams['axes.linewidth'] = 2
+    fig = plt.figure()
+    ax = plt.subplot(111)
+    ax.xaxis.set_tick_params(which='major', size=10, width=2, direction='in', top='on')
+    ax.xaxis.set_tick_params(which='minor', size=7, width=2, direction='in', top='on')
+    ax.yaxis.set_tick_params(which='major', size=10, width=2, direction='in', right='on')
+    ax.yaxis.set_tick_params(which='minor', size=7, width=2, direction='in', right='on')
+    ax.plot(nParticlesList, np.array(rgList)/radius, ".", label = "Obtained", markersize = 15)
+    ax.plot(nParticlesList, (nParticlesList/kf)**(1/Df), label = "Expected", linewidth = 2)
+    ax.set_xlabel("Number of particles")
+    ax.set_ylabel("$R_g$/a")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.legend()
+    plt.show()
 
     
 Df = float(sys.argv[1])
@@ -34,23 +55,5 @@ for filename in files:
         rgList+=[computeGyrationRadius(pos, radius*radius)]
         nParticlesList+=[nParticles]
 nParticlesList = np.array(nParticlesList)
-fit = u.least_squares(nParticlesList, np.array(rgList), xscale = "log", yscale = "log")
-print("Expected Df = "+str(Df)+"; Obtained Df = " + str(1/fit[0]))
-print("Expected kf = "+str(kf)+"; Obtained kf = " + str(pow(radius/np.exp(fit[1]),Df)))
-plt.rcParams['font.size'] = 20
-plt.rcParams['figure.constrained_layout.use'] = True
-plt.rcParams['axes.linewidth'] = 2
-fig = plt.figure()
-ax = plt.subplot(111)
-ax.xaxis.set_tick_params(which='major', size=10, width=2, direction='in', top='on')
-ax.xaxis.set_tick_params(which='minor', size=7, width=2, direction='in', top='on')
-ax.yaxis.set_tick_params(which='major', size=10, width=2, direction='in', right='on')
-ax.yaxis.set_tick_params(which='minor', size=7, width=2, direction='in', right='on')
-ax.plot(nParticlesList, np.array(rgList)/radius, ".", label = "Obtained", markersize = 15)
-ax.plot(nParticlesList, (nParticlesList/kf)**(1/Df), label = "Expected", linewidth = 2)
-ax.set_xlabel("Number of particles")
-ax.set_ylabel("$R_g$/a")
-ax.set_xscale("log")
-ax.set_yscale("log")
-ax.legend()
-plt.show()
+printResults(nParticlesList, rgList, Df, kf)
+plotResults(nParticlesList, rgList, Df, kf, radius)
