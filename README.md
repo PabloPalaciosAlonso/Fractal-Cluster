@@ -23,7 +23,8 @@ You can test the code after compiling with:
 ```bash
 $ cp fc test/fc; chmod +x test.bash; ./test.bash
 ```
-It will generate some clusters with different number of spheres and copmute the gyration radius as a function of the number of particles to see if relation 1 is verified.
+It will generate some clusters with different number of spheres and then compute the gyration radius of the aggregates as a function of the number of particles composing the cluster, in order to test if relation 1 is verified. If it is verified in a log-log plot the gyration radius a a funtion of the number of particles should be a straigh line with slope $D_f$ and y-intercept equals to $ln(k_f/radius^{D_f})$.
+
 You can edit the file test.bash to choose the different paramters. 
 
   
