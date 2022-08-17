@@ -16,7 +16,9 @@ Where:
    - $R_g$ = Gyration radius of the cluster $R_g^2 = 1/N \cdot \sum (\mathbf{r_i}-\mathbf{c_m})^2$.
    
 # Compile with
+```bash
 $ make
+```
 You can test the code after compiling with:
 
    $ cp fc test/fc; chmod +x test.bash; ./test.bash
